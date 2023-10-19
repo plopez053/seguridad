@@ -1,0 +1,16 @@
+import os
+import hashlib
+directorio = os.scandir("/home/peio/Descargas/imagen")
+hashABuscar = "e5ed313192776744b9b93b1320b5e268"
+
+for entry in directorio:
+    if entry.is_file:
+        with open(entry, 'rb') as f:
+            buffer = f.read()
+            hash = hashlib.md5()
+            hash.update(buffer)
+            lastHash = hash.hexdigest()
+            if lastHash == hashABuscar:
+                archivo = entry
+            
+print(archivo)  
