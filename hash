@@ -1,6 +1,6 @@
 import os
 import hashlib
-directorio = os.scandir("/home/peio/Descargas/imagen")
+directorio = os.scandir("/home/lsi/Descargas/md5")
 hashABuscar = "e5ed313192776744b9b93b1320b5e268"
 
 for entry in directorio:
